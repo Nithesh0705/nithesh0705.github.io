@@ -1,0 +1,557 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #0A192F;
+  color: white;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10%;
+  background: transparent;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #64ffda;
+}
+
+#about h2 {
+  font-size: clamp(32px, 5vw, 48px);
+}
+
+#about p {
+  font-size: clamp(16px, 2vw, 20px);
+}
+
+.content {
+    margin:50px;
+  position: relative;
+  z-index: 2;
+}
+.btn {
+  background: #00ffcc;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #00ffcc;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,255,204,0.4);
+}
+.particles {
+  pointer-events: none;
+}
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
+#particles {
+  position: absolute;
+  z-index: 0;
+}
+
+.skills h2 {
+  font-size: 36px;
+}
+
+.about ul{
+    list-style: none;
+}
+.skill-box {
+  font-size: 16px;
+  padding: 10px 18px;
+}
+.what-title::before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 3px;
+  background: #00ffcc; /* you can change color */
+  margin: 0 auto 20px;
+  border-radius: 5px;
+}
+/* Hero */
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.hero span {
+  color: #64ffda;
+}
+
+.hero h3 {
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.hero p {
+  margin: 15px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #64ffda;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: white;
+}
+
+/* Sections */
+section {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+/* Projects */
+.project-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #112240;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020c1b;
+}
+/* Navbar scroll */
+nav.scrolled {
+  background: rgba(2, 12, 27, 0.9);
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+/* Mobile Menu */
+.menu-btn {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #112240;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 15px 0;
+    text-align: center;
+  }
+}
+
+/* Fade Animation */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* HERO LAYOUT */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+  min-height: 90vh;
+}
+
+/* LEFT */
+.hero-left {
+  width: 50%;
+}
+
+.hero-left h1 {
+  font-size: 42px;
+}
+
+.hero-left span {
+  color: #64ffda;
+}
+
+/* RIGHT */
+.hero-right {
+  width: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* GLOW CIRCLE */
+.circle {
+  width: 300px;
+  height: 300px;
+  background: #64ffda;
+  border-radius: 50%;
+  position: absolute;
+  filter: blur(100px);
+  z-index: 0;
+}
+
+/* PROFILE IMAGE */
+.profile {
+  width: 250px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+/* FLOATING CARDS */
+.card {
+  position: absolute;
+  background: #112240;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Card positions */
+.c1 {
+  top: 10%;
+  right: 0;
+}
+
+.c2 {
+  bottom: 20%;
+  left: 0;
+}
+
+.c3 {
+  bottom: 0;
+  right: 10%;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left, .hero-right {
+    width: 100%;
+  }
+
+  .hero-right {
+    margin-top: 30px;
+  }
+}
+/* TECH VISUAL (NO IMAGE) */
+.tech-circle {
+  width: 220px;
+  height: 220px;
+  border: 2px dashed #64ffda;
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 10s linear infinite;
+  z-index: 1;
+}
+
+/* Glow circle */
+.circle {
+  width: 300px;
+  height: 300px;
+  background: #64ffda;
+  border-radius: 50%;
+  position: absolute;
+  filter: blur(120px);
+  z-index: 0;
+}
+
+/* Animation */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Floating cards improved */
+.card {
+  position: absolute;
+  background: rgba(17, 34, 64, 0.9);
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  backdrop-filter: blur(5px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card positions */
+.c1 {
+  top: 10%;
+  right: 0;
+}
+
+.c2 {
+  bottom: 25%;
+  left: 0;
+}
+
+.c3 {
+  bottom: 0;
+  right: 10%;
+}
+/* BACKGROUND GRADIENT */
+.bg-gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 30%, #64ffda33, transparent 40%),
+              radial-gradient(circle at 70% 70%, #0A192F, transparent 50%);
+  z-index: 0;
+}
+
+/* HERO FIX */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* PARTICLE CANVAS */
+#particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* GLASS CARDS */
+.card {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.05);
+  padding:10px 25px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.05);
+}
+
+/* TECH CIRCLE */
+.tech-circle {
+  width: 220px;
+  height: 220px;
+  border: 2px solid #64ffda;
+  border-radius: 50%;
+  animation: rotate 12s linear infinite;
+}
+
+/* ROTATE */
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+
+
+.project a {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 6px 12px;
+  background: #64ffda;
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.skills-container span {
+  background: #112240;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+
+/* CONTACT FORM */
+.contact-form {
+  max-width: 500px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* INPUTS & TEXTAREA */
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #112240;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* FOCUS EFFECT */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid #64ffda;
+  box-shadow: 0 0 8px #64ffda55;
+}
+
+/* TEXTAREA HEIGHT */
+.contact-form textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+/* BUTTON */
+.contact-form button {
+  padding: 12px;
+  background: #64ffda;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+.contact-form button:hover {
+  background: white;
+  transform: translateY(-2px);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact-form {
+    width: 90%;
+  }
+}
+.contact h2{
+    margin-top: 50px;
+}
+
+.project {
+  position: relative;
+  overflow: hidden;
+}
+
+.project::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, #64ffda33, transparent);
+  top: 0;
+  left: -100%;
+  transition: 0.5s;
+}
+
+.project:hover::before {
+  left: 100%;
+}
+
+.hire {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hire h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.hire p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+  color: #dcdcdc;
+}
